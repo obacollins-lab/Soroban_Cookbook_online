@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import Link from '@docusaurus/Link';
 import NewsletterSignup from '@site/src/components/NewsletterSignup';
 import PatternPreview, { Pattern } from '@site/src/components/PatternPreview';
@@ -12,7 +11,8 @@ const samplePatterns: Pattern[] = [
   {
     id: '1',
     contractName: 'hello_world',
-    description: 'A minimal contract demonstrating persistent storage and basic contract structure.',
+    description:
+      'A minimal contract demonstrating persistent storage and basic contract structure.',
     tag: '#storage',
     category: 'storage',
     difficulty: 'beginner',
@@ -27,7 +27,8 @@ const samplePatterns: Pattern[] = [
   {
     id: '2',
     contractName: 'token_contract',
-    description: 'Implementation of a fungible token with mint, transfer, and balance functionality.',
+    description:
+      'Implementation of a fungible token with mint, transfer, and balance functionality.',
     tag: '#tokens',
     category: 'tokens',
     difficulty: 'intermediate',
@@ -138,7 +139,6 @@ export default function Home() {
     <Layout
       title="Soroban Cookbook"
       description="Master Soroban smart contracts with practical patterns and production-ready guides.">
-      
       <header className={styles.hero}>
         <div className={styles.glowOne}></div>
         <div className={styles.glowTwo}></div>
@@ -174,20 +174,24 @@ export default function Home() {
       <div className={styles.container}>
         {isLoading ? (
           <div style={{ padding: '4rem 0' }}>
-            <div style={{ 
-              background: 'var(--ifm-background-surface-color)', 
-              padding: '2rem', 
-              borderRadius: '12px', 
-              border: '1px solid var(--ifm-border-color)' 
-            }}>
+            <div
+              style={{
+                background: 'var(--ifm-background-surface-color)',
+                padding: '2rem',
+                borderRadius: '12px',
+                border: '1px solid var(--ifm-border-color)',
+              }}>
               <Skeleton height="40px" width="50%" />
               <div style={{ marginTop: '1rem' }}>
                 <Skeleton height="20px" width="100%" />
                 <Skeleton height="20px" width="90%" />
               </div>
-              <div style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div
+                style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <Spinner size={24} />
-                <span style={{ color: 'var(--ifm-color-emphasis-700)' }}>Initializing cookbook data...</span>
+                <span style={{ color: 'var(--ifm-color-emphasis-700)' }}>
+                  Initializing cookbook data...
+                </span>
               </div>
             </div>
           </div>
@@ -206,7 +210,7 @@ export default function Home() {
           </>
         )}
       </div>
-      
+
       <NewsletterSignup />
     </Layout>
   );
