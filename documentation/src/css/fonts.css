@@ -1,0 +1,45 @@
+/**
+ * Font Loading Strategy
+ *
+ * Self-hosted via @fontsource-variable packages (woff2, variable fonts).
+ * - font-display: swap  → text stays visible during load (no FOIT), minimal CLS
+ * - size-adjust on fallbacks → nudges system font metrics to match Inter/JetBrains
+ *   so layout shift is near-zero when the custom font swaps in.
+ *
+ * Subsets loaded: latin only (covers all docs content, keeps payload small).
+ * Variable axes: wght (Inter: 100–900, JetBrains Mono: 100–800).
+ */
+
+/* ── Inter Variable (sans-serif) ─────────────────────────────────────────── */
+@import '@fontsource-variable/inter/index.css';
+
+/* ── JetBrains Mono Variable (monospace / code blocks) ───────────────────── */
+@import '@fontsource-variable/jetbrains-mono/index.css';
+
+/* ── Fallback metric adjustments to reduce CLS ───────────────────────────── */
+
+/*
+ * "Inter Fallback" mirrors Inter's line metrics so the system font
+ * placeholder occupies the same space. Values derived from inter's
+ * ascent/descent/line-gap via fonttools / capsizecss.
+ */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+/*
+ * "JetBrains Mono Fallback" mirrors JetBrains Mono metrics.
+ */
+@font-face {
+  font-family: 'JetBrains Mono Fallback';
+  src: local('Courier New');
+  size-adjust: 115%;
+  ascent-override: 83%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+}

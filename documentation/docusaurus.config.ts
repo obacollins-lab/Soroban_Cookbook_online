@@ -46,6 +46,29 @@ const config: Config = {
         content: '#1e1e2e',
       },
     },
+    // Preload the Inter variable font (latin woff2) — critical for above-the-fold text.
+    // The href must match the path emitted by @fontsource-variable/inter after build.
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/assets/fonts/inter-latin-wght-normal.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
+    // Preload JetBrains Mono for code blocks.
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/assets/fonts/jetbrains-mono-latin-wght-normal.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
     {
       tagName: 'meta',
       attributes: {
@@ -123,12 +146,8 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: [
-            './src/css/custom.css',
-            './src/css/breakpoints.css',
-            './src/css/design-tokens.css',
-            './src/css/search-experience.css',
-          ],
+          customCss: ['./src/css/fonts.css', './src/css/custom.css', './src/css/breakpoints.css', './src/css/design-tokens.css','./src/css/design-tokens.css',
+            './src/css/search-experience.css',]
         },
       } satisfies Preset.Options,
     ],

@@ -39,17 +39,20 @@ Before the workflow can successfully deploy, ensure the following repository set
 ### Workflow Details
 
 **Trigger Events:**
+
 - Push to `main` branch
 - Manual trigger via "Run workflow" button in Actions tab
 
 **Build Process:**
+
 1. Checkout code
-2. Setup Node.js 20
-3. Install dependencies using `npm ci` (with lockfile) or `npm install`
-4. Build documentation with `npm run build`
+2. Setup Bun
+3. Install dependencies using `bun install --frozen-lockfile`
+4. Build documentation with `bun run build`
 5. Upload build artifact to GitHub Pages
 
 **Deployment Process:**
+
 1. Configure GitHub Pages environment
 2. Deploy artifact to GitHub Pages
 3. Deployment URL available in workflow run details
@@ -70,6 +73,7 @@ Before the workflow can successfully deploy, ensure the following repository set
 #### Deployment Skipped
 
 **Solution:** Check that:
+
 - You're pushing to the `main` branch
 - Workflow permissions are set to "Read and write"
 - No branch protection rules are blocking the deployment
@@ -77,18 +81,21 @@ Before the workflow can successfully deploy, ensure the following repository set
 #### Build Fails
 
 **Solution:** Check the workflow logs for specific errors:
+
 1. Go to Actions tab
 2. Click on the failed run
 3. Expand the "Build website" step to see error details
 
 Common issues:
-- Missing dependencies: Run `npm ci` locally to verify
-- TypeScript errors: Run `npm run typecheck` locally
-- Build errors: Run `npm run build` locally to reproduce
+
+- Missing dependencies: Run `bun install --frozen-lockfile` locally to verify
+- TypeScript errors: Run `bun run typecheck` locally
+- Build errors: Run `bun run build` locally to reproduce
 
 #### Artifact Upload Fails
 
 **Solution:** Verify that:
+
 - The build directory exists at `documentation/build`
 - Build completed successfully (check previous step logs)
 - Sufficient storage quota available
@@ -144,8 +151,8 @@ This starts a live-reload development server at `http://localhost:3000`.
 ## Environment Variables
 
 Currently, no environment variables are required for deployment. The workflow uses:
-- Node.js 20 (specified in workflow)
-- npm for package management
+
+- Bun (specified in workflow)
 - Docusaurus build configuration from `documentation/docusaurus.config.ts`
 
 ## Performance Considerations
@@ -172,6 +179,7 @@ Currently, no environment variables are required for deployment. The workflow us
 ## Support
 
 For issues or questions:
+
 1. Check the troubleshooting section above
 2. Review workflow logs in the Actions tab
 3. Open an issue on GitHub with workflow logs attached

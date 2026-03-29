@@ -498,9 +498,11 @@
   aspect-ratio: 16 / 9;
 }
 
-html {
-  font-display: optional;
-}
+/*
+ * font-display is a @font-face descriptor, not a CSS property for html/body.
+ * It is set directly in the @font-face rules inside fonts.css (via fontsource).
+ * No rule needed here.
+ */
 
 .layout-transition {
   transition:

@@ -15,6 +15,7 @@ const sidebars: SidebarsConfig = {
         'getting-started/setup-windows',
         'getting-started/first-contract',
         'getting-started/deploy-testnet',
+        'contributing',
       ],
     },
     {
@@ -34,6 +35,23 @@ const sidebars: SidebarsConfig = {
       items: [
         'patterns/overview',
         'patterns/hello-world',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Security',
+      items: [
+        'security/fundamentals',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Design System',
+      items: [
+        'design-system/buttons',
+        'design-system/typography',
+        'design-system/badges-tags',
+        'design-system/empty-states',
       ],
     },
     {
