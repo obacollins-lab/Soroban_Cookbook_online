@@ -1,13 +1,9 @@
-import type { ReactNode } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import { useColorMode } from '@docusaurus/theme-common';
 import { Highlight, themes as prismThemes } from 'prism-react-renderer';
 import styles from './styles.module.css';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SNIPPET
-// ─────────────────────────────────────────────────────────────────────────────
 const SNIPPET = `#![no_std]
 use soroban_sdk::{contract, contractimpl, Env, Symbol, symbol_short};
 
@@ -21,9 +17,6 @@ impl HelloContract {
     }
 }`;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// COPY BUTTON
-// ─────────────────────────────────────────────────────────────────────────────
 type CopyState = 'idle' | 'success' | 'error';
 
 const labelMap: Record<CopyState, string> = {
@@ -38,7 +31,7 @@ const ariaLabelMap: Record<CopyState, string> = {
   error: 'Copy failed',
 };
 
-function CopyButton({ text }: { text: string }): ReactNode {
+function CopyButton({ text }: { text: string }) {
   const [copyState, setCopyState] = useState<CopyState>('idle');
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -69,17 +62,13 @@ function CopyButton({ text }: { text: string }): ReactNode {
       onClick={handleClick}
       disabled={isDisabled}
       aria-label={ariaLabelMap[copyState]}
-      className={styles.copyButton}
-    >
+      className={styles.copyButton}>
       {labelMap[copyState]}
     </button>
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// QUICK START SECTION
-// ─────────────────────────────────────────────────────────────────────────────
-export default function QuickStartSection(): ReactNode {
+export default function QuickStartSection() {
   const { colorMode } = useColorMode();
   const selectedTheme = colorMode === 'dark' ? prismThemes.vsDark : prismThemes.github;
 
@@ -102,7 +91,9 @@ export default function QuickStartSection(): ReactNode {
         )}
       </Highlight>
       <CopyButton text={SNIPPET} />
-      <Link href="/docs/getting-started/setup" className={styles.ctaLink}>Read the full setup guide →</Link>
+      <Link href="/docs/getting-started/setup" className={styles.ctaLink}>
+        Read the full setup guide →
+      </Link>
     </section>
   );
 }
