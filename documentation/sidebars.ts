@@ -39,6 +39,7 @@ const sidebars: SidebarsConfig = {
         'patterns/hello-world',
         'patterns/custom-types',
         'patterns/optimization-playbook',
+        'patterns/lifecycle-upgrades',
       ],
     },
     {
