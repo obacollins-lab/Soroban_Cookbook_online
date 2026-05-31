@@ -16,6 +16,7 @@ const sidebars: SidebarsConfig = {
         'getting-started/first-contract',
         'getting-started/building-and-compilation',
         'getting-started/deploy-testnet',
+        'getting-started/deploy-mainnet',
         'getting-started/contract-interaction',
         'contributing',
         'contributing/add-tested-example',
