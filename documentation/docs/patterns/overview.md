@@ -34,6 +34,12 @@ Error taxonomy, custom error patterns, error propagation strategies, and user-fa
 
 Comprehensive error handling patterns including Result types, fallback logic, graceful degradation, transaction rollback, and input validation. Essential for production-ready contracts.
 
+### [Staking Contract](/docs/patterns/staking)
+
+<span class="sb-badge sb-badge--intermediate">Intermediate</span> <span class="sb-tag sb-tag--defi">DeFi</span> <span class="sb-badge sb-badge--stable">Stable</span>
+
+Token staking with pro-rata reward distribution over fixed-length epochs. Covers stake, unstake, and claim flows with lazy reward settlement, admin reward configuration, and full unit tests.
+
 ## Pattern Categories
 
 ### 🪙 Token Standards
