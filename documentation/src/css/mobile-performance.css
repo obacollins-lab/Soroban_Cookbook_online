@@ -1,0 +1,147 @@
+/**
+ * Mobile Performance Optimizations — ISSUE #196
+ * ─────────────────────────────────────────────
+ * Reduces rendering overhead and animations on mobile devices
+ * for better performance, especially on low-end devices.
+ */
+
+/* ──────────────────────────────────────────────────────────
+   SECTION 1: Respect user motion preferences
+   Disable animations for users who prefer reduced motion.
+   ────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────
+   SECTION 2: Mobile-specific touch optimizations
+   ────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Increase touch target sizes for better mobile UX */
+  button,
+  a,
+  [role='button'] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem;
+  }
+
+  /* Reduce shadow complexity on mobile for better performance */
+  .docusaurus-mt-lg,
+  .card,
+  [role='article'] {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Disable GPU-intensive effects on carousel/animations */
+  .carousel,
+  [data-carousel],
+  .splide {
+    will-change: auto;
+  }
+
+  /* Optimize text rendering on mobile */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────
+   SECTION 3: Image optimization hints
+   ────────────────────────────────────────────────────────── */
+
+/* Prevent layout shift with explicit aspect-ratio */
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Optimize image rendering */
+picture,
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* Use contain for better performance */
+  content-visibility: auto;
+}
+
+/* ──────────────────────────────────────────────────────────
+   SECTION 4: Font optimization
+   ────────────────────────────────────────────────────────── */
+
+/* Ensure font-display: swap for better perceived performance */
+@font-face {
+  font-family: 'Inter Variable';
+  src: url('/assets/fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+}
+
+/* ──────────────────────────────────────────────────────────
+   SECTION 5: Lazy-loaded component styling
+   ────────────────────────────────────────────────────────── */
+
+/* Smooth fade-in for lazy-loaded sections */
+.lazy-section-enter {
+  opacity: 0;
+}
+
+.lazy-section-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+/* Loading skeleton styling for better UX */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--ifm-color-emphasis-200),
+    var(--ifm-color-emphasis-100),
+    var(--ifm-color-emphasis-200)
+  );
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────
+   SECTION 6: Container queries for responsive performance
+   ────────────────────────────────────────────────────────── */
+
+@supports (container-type: inline-size) {
+  .pattern-preview,
+  .carousel-container {
+    container-type: inline-size;
+  }
+
+  /* Adjust patterns for narrow containers (mobile) */
+  @container (max-width: 640px) {
+    .pattern-card {
+      max-width: 100%;
+    }
+
+    .carousel {
+      scroll-snap-type: x mandatory;
+    }
+  }
+}

@@ -10,6 +10,9 @@
 /* Issue #40: Mobile menu polish */
 @import './mobile-menu.css';
 
+/* ISSUE #196: Mobile performance optimizations */
+@import './mobile-performance.css';
+
 /* ── Light Mode (Default) ───────────────────────────────────────────────────── */
 
 :root {
