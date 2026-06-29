@@ -86,3 +86,4 @@ export default function NftPage() {
     </Layout>
   );
 }
+
