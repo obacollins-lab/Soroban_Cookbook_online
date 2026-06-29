@@ -8,7 +8,8 @@ const tokenPatterns: Pattern[] = [
   {
     id: '1',
     contractName: 'token_contract',
-    description: 'Implementation of a fungible token with mint, transfer, and balance functionality.',
+    description:
+      'Implementation of a fungible token with mint, transfer, and balance functionality.',
     tag: '#tokens',
     category: 'tokens',
     difficulty: 'intermediate',
@@ -87,4 +88,3 @@ export default function TokensPage() {
     </Layout>
   );
 }
-

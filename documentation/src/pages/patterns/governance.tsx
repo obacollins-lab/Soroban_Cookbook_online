@@ -63,7 +63,8 @@ export default function GovernancePage() {
           <h1 className={styles.title}>Governance & DAO Patterns</h1>
 
           <p className={styles.subtitle}>
-            Implement decentralized governance with voting systems, proposals, and delegation mechanisms.
+            Implement decentralized governance with voting systems, proposals, and delegation
+            mechanisms.
           </p>
 
           <div className={styles.buttons}>
@@ -87,4 +88,3 @@ export default function GovernancePage() {
     </Layout>
   );
 }
-

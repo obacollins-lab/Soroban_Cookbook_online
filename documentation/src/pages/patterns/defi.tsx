@@ -76,7 +76,8 @@ export default function DefiPage() {
           <h1 className={styles.title}>DeFi Patterns & Protocols</h1>
 
           <p className={styles.subtitle}>
-            Build decentralized finance applications with liquidity pools, staking, and swap mechanisms.
+            Build decentralized finance applications with liquidity pools, staking, and swap
+            mechanisms.
           </p>
 
           <div className={styles.buttons}>
@@ -100,4 +101,3 @@ export default function DefiPage() {
     </Layout>
   );
 }
-
