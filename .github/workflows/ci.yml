@@ -211,12 +211,14 @@ jobs:
     name: Lighthouse Mobile Audit
     runs-on: ubuntu-latest
     needs: [build-docs]
-    defaults:
-      run:
-        working-directory: ./documentation
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Download build artifact
         uses: actions/download-artifact@v4
@@ -230,7 +232,7 @@ jobs:
           runs: 1
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: './documentation/lighthouserc.json'
+          configPath: './lighthouserc.json'
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
