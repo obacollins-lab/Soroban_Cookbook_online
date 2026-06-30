@@ -82,6 +82,13 @@ const sidebars: SidebarsConfig = {
         'responsive/breakpoints',
       ],
     },
+    {
+      type: 'category',
+      label: 'QA & Testing',
+      items: [
+        'qa/manual-test-protocol',
+      ],
+    },
   ],
 };
 
