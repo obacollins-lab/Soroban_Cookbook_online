@@ -16,6 +16,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## Pre-Release Checklist
 
 ### Environment Setup
+
 - [ ] Development environment is clean (no stale node_modules)
 - [ ] All dependencies installed: `bun install` or `npm install`
 - [ ] All automated tests pass: `npm run test` (if applicable)
@@ -29,6 +30,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 1. Navigation & Site Structure
 
 ### Main Navigation Menu
+
 - [ ] Home link navigates to landing page
 - [ ] "Getting Started" dropdown opens and all sub-items are visible
 - [ ] "Concepts" dropdown opens and all sub-items are visible
@@ -39,12 +41,14 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] All navigation links have correct paths (no 404s)
 
 ### Breadcrumb Navigation (if applicable)
+
 - [ ] Breadcrumbs appear on all pages
 - [ ] Breadcrumb links navigate to correct parent pages
 - [ ] Breadcrumb text is accurate
 - [ ] On mobile, breadcrumbs are readable and don't overflow
 
 ### Footer Navigation
+
 - [ ] Footer links are present and clickable
 - [ ] Social media links open in new tabs
 - [ ] External links (GitHub, Discord, etc.) are correct
@@ -55,6 +59,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 2. Search Functionality
 
 ### Search Bar
+
 - [ ] Search bar is visible on all pages (desktop and mobile)
 - [ ] Search bar accepts input
 - [ ] Search returns relevant results for common terms:
@@ -69,6 +74,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Search is keyboard accessible (Enter to search, Escape to close)
 
 ### Advanced Search (if applicable)
+
 - [ ] Filter by category works
 - [ ] Filter by difficulty works
 - [ ] Multiple filters can be applied together
@@ -79,6 +85,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 3. Theme & Styling
 
 ### Light Mode
+
 - [ ] Site displays in light theme by default
 - [ ] Text is readable (sufficient contrast)
 - [ ] Links are visually distinct and underlined
@@ -89,6 +96,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Alerts/callouts display with correct colors and icons
 
 ### Dark Mode
+
 - [ ] Dark mode toggle is accessible
 - [ ] Site switches to dark theme when toggled
 - [ ] Text is readable in dark mode (sufficient contrast)
@@ -101,6 +109,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Theme preference persists on page reload
 
 ### Responsive Design
+
 - [ ] Desktop view (1920px): All content fits, no horizontal scroll
 - [ ] Tablet view (768px): Content reflows correctly, touch targets are adequate
 - [ ] Mobile view (375px): Content is readable, no text overflow
@@ -111,6 +120,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] No content is hidden unintentionally on mobile
 
 ### Typography & Spacing
+
 - [ ] Font sizes are consistent across pages
 - [ ] Line height is adequate for readability
 - [ ] Margins and padding are consistent
@@ -123,6 +133,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 4. Documentation Pages
 
 ### Getting Started Section
+
 - [ ] Setup guide loads without errors
 - [ ] Code blocks render with proper syntax highlighting
 - [ ] Copy-to-clipboard functionality works on code blocks
@@ -131,6 +142,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Installation steps are accurate and up-to-date
 
 ### Concepts Pages
+
 - [ ] All concept pages load correctly
 - [ ] Cross-links between concepts work
 - [ ] Code examples are properly formatted
@@ -139,6 +151,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] No placeholder text remains
 
 ### Pattern Pages
+
 - [ ] All pattern categories display correctly
 - [ ] Pattern cards show:
   - [ ] Contract name
@@ -152,6 +165,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Related patterns are linked correctly
 
 ### Individual Pattern Pages
+
 - [ ] Pattern title and description are present
 - [ ] Code tabs (if multiple languages) are switchable
 - [ ] Full source code is displayed or linked
@@ -161,6 +175,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] External links to examples/repos work correctly
 
 ### Contributing Guide
+
 - [ ] All sections are present and readable
 - [ ] Code examples in contributing guide render correctly
 - [ ] Links to GitHub workflows/scripts are accurate
@@ -173,6 +188,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 5. Components & Interactive Elements
 
 ### Code Blocks
+
 - [ ] Syntax highlighting works for all supported languages (Rust, TypeScript, JavaScript, etc.)
 - [ ] Line numbers display correctly (if enabled)
 - [ ] Code doesn't overflow horizontally on mobile
@@ -181,6 +197,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Code font rendering is clear and monospace
 
 ### Callouts & Alerts
+
 - [ ] Info callouts display with correct icon and color
 - [ ] Warning callouts display with correct icon and color
 - [ ] Danger/Error callouts display with correct icon and color
@@ -189,6 +206,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Callouts are present on relevant pages
 
 ### Buttons
+
 - [ ] Primary buttons have correct styling and hover state
 - [ ] Secondary buttons have correct styling and hover state
 - [ ] Button text is clear and action-oriented
@@ -196,6 +214,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Button padding/sizing is consistent
 
 ### Forms (if applicable)
+
 - [ ] Input fields are properly labeled
 - [ ] Input fields accept input correctly
 - [ ] Error messages display clearly
@@ -204,6 +223,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Submit button is clearly visible and functional
 
 ### Cards & Grids
+
 - [ ] Pattern preview grids display 3+ columns on desktop
 - [ ] Pattern preview grids stack to 1 column on mobile
 - [ ] Card spacing is consistent
@@ -216,6 +236,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 6. Pages & Routes
 
 ### Homepage
+
 - [ ] Page loads without errors
 - [ ] Hero section is visually complete
 - [ ] CTA buttons are prominent and clickable
@@ -226,6 +247,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] All sections are properly spaced
 
 ### Pattern Overview Page (`/docs/category/patterns`)
+
 - [ ] Category links are all present:
   - [ ] Tokens
   - [ ] DeFi
@@ -236,6 +258,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Back links return to overview
 
 ### Category Landing Pages
+
 - [ ] `/patterns/tokens` loads with token-specific patterns
 - [ ] `/patterns/defi` loads with DeFi-specific patterns
 - [ ] `/patterns/governance` loads with governance patterns
@@ -245,6 +268,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Navigation back to overview works
 
 ### 404 Error Page
+
 - [ ] 404 page displays when navigating to non-existent routes
 - [ ] 404 page provides helpful navigation options
 - [ ] "Back to Home" button works
@@ -256,6 +280,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 7. Performance & Load Times
 
 ### Page Load Performance
+
 - [ ] Homepage loads within 3 seconds (first paint)
 - [ ] Documentation pages load within 2 seconds
 - [ ] Pattern pages load without blocking main content
@@ -264,6 +289,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Code blocks don't block page rendering
 
 ### Interaction Performance
+
 - [ ] Search results appear within 500ms
 - [ ] Theme toggle is instant
 - [ ] Menu opens/closes smoothly without lag
@@ -272,6 +298,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Page transitions are smooth
 
 ### Network Conditions
+
 - [ ] Site is usable on slow 3G (throttle to test)
 - [ ] Critical content loads even with high latency
 - [ ] Images scale appropriately for slow connections
@@ -281,6 +308,7 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 8. Accessibility
 
 ### Keyboard Navigation
+
 - [ ] All interactive elements are reachable via Tab
 - [ ] Tab order follows visual layout
 - [ ] Buttons can be activated with Enter/Space
@@ -289,6 +317,7 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Focus is never lost or trapped
 
 ### Screen Reader Compatibility
+
 - [ ] Page title is descriptive
 - [ ] Headings are semantic (h1, h2, h3)
 - [ ] Images have alt text (meaningful descriptions)
@@ -298,12 +327,14 @@ This document provides a comprehensive manual testing checklist for validating t
 - [ ] Landmark regions are properly marked (nav, main, etc.)
 
 ### Color & Contrast
+
 - [ ] Text contrast meets WCAG AA standard (4.5:1 for normal text)
 - [ ] Color is not the only way to convey information
 - [ ] Links are distinguishable from body text (not color alone)
 - [ ] Form validation errors are indicated beyond color
 
 ### Focus Indicators
+
 - [ ] Focus outline is visible on all interactive elements
 - [ ] Focus outline has sufficient contrast
 - [ ] Focus indicator is not missing on any element
@@ -313,17 +344,20 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 9. Cross-Browser Testing
 
 ### Desktop Browsers
+
 - [ ] Chrome/Chromium (latest version)
 - [ ] Firefox (latest version)
 - [ ] Safari (latest version)
 - [ ] Edge (latest version)
 
 ### Mobile Browsers
+
 - [ ] Chrome Mobile (latest)
 - [ ] Safari Mobile (iOS)
 - [ ] Firefox Mobile (latest)
 
 **For each browser, test:**
+
 - [ ] Page loads without errors
 - [ ] Styling renders correctly
 - [ ] No layout shifts or broken elements
@@ -336,16 +370,19 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 10. External Integrations
 
 ### GitHub Links
+
 - [ ] Links to repository open correct page
 - [ ] Links to specific files/lines are accurate
 - [ ] Edit on GitHub buttons work (if applicable)
 
 ### Community Links
+
 - [ ] Discord server link is valid
 - [ ] Community forum/discussion links work
 - [ ] Email contact links are correct
 
 ### Analytics (if applicable)
+
 - [ ] Page view tracking is working
 - [ ] Interaction events are tracked
 - [ ] No broken image/beacon requests
@@ -355,17 +392,20 @@ This document provides a comprehensive manual testing checklist for validating t
 ## 11. Release-Specific Checks
 
 ### Version & Metadata
+
 - [ ] Site version/build number is correct
 - [ ] Meta tags (og:image, description) are accurate
 - [ ] Favicon displays correctly
 - [ ] Social media preview shows correct image/description
 
 ### Redirects (if applicable)
+
 - [ ] Old documentation URLs redirect correctly
 - [ ] Deprecated pages show proper redirect message
 - [ ] No redirect chains or loops
 
 ### Deployment Verification
+
 - [ ] Site is accessible at production domain
 - [ ] HTTPS certificate is valid
 - [ ] SSL/TLS is enforced (no mixed content)
@@ -377,31 +417,32 @@ This document provides a comprehensive manual testing checklist for validating t
 
 ### Before Approving Release
 
-| Item | Tested | Result | Notes |
-|------|--------|--------|-------|
-| Navigation | [ ] | PASS/FAIL | |
-| Search | [ ] | PASS/FAIL | |
-| Theme | [ ] | PASS/FAIL | |
-| Documentation | [ ] | PASS/FAIL | |
-| Components | [ ] | PASS/FAIL | |
-| Routes | [ ] | PASS/FAIL | |
-| Performance | [ ] | PASS/FAIL | |
-| Accessibility | [ ] | PASS/FAIL | |
-| Cross-Browser | [ ] | PASS/FAIL | |
-| External Integrations | [ ] | PASS/FAIL | |
-| Release Checks | [ ] | PASS/FAIL | |
+| Item                  | Tested | Result    | Notes |
+| --------------------- | ------ | --------- | ----- |
+| Navigation            | [ ]    | PASS/FAIL |       |
+| Search                | [ ]    | PASS/FAIL |       |
+| Theme                 | [ ]    | PASS/FAIL |       |
+| Documentation         | [ ]    | PASS/FAIL |       |
+| Components            | [ ]    | PASS/FAIL |       |
+| Routes                | [ ]    | PASS/FAIL |       |
+| Performance           | [ ]    | PASS/FAIL |       |
+| Accessibility         | [ ]    | PASS/FAIL |       |
+| Cross-Browser         | [ ]    | PASS/FAIL |       |
+| External Integrations | [ ]    | PASS/FAIL |       |
+| Release Checks        | [ ]    | PASS/FAIL |       |
 
 **Overall Status:** [ ] READY FOR RELEASE [ ] ISSUES FOUND (see below)
 
 **Issues Found:**
+
 ```
 - Issue 1: [Description]
 - Issue 2: [Description]
 ```
 
-**Tested by:** ________________  
-**Date:** ________________  
-**Browser/Device:** ________________  
+**Tested by:** ******\_\_\_\_******  
+**Date:** ******\_\_\_\_******  
+**Browser/Device:** ******\_\_\_\_******
 
 ---
 
@@ -445,4 +486,3 @@ If you find a bug during manual testing:
 - [Contributing Guide](../contributing.md)
 - [Performance Benchmarks](../contributing/performance-impact.md)
 - [CI/CD Pipeline](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/blob/main/CI_CD_PIPELINE.md)
-
