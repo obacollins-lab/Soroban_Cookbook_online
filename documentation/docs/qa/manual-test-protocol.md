@@ -414,7 +414,7 @@ For faster testing iterations, run through this abbreviated checklist:
 3. **Theme:** Toggle dark/light mode, verify styling
 4. **Patterns:** Visit `/patterns/tokens` and `/patterns/defi`
 5. **404:** Navigate to `/nonexistent` page
-6. **Performance:** Check DevTools Network tab, verify <3s load time
+6. **Performance:** Check DevTools Network tab, verify &lt;3s load time
 7. **Mobile:** Inspect element, test responsive design at 375px
 8. **Accessibility:** Press Tab multiple times, verify focus is visible
 
@@ -444,5 +444,5 @@ If you find a bug during manual testing:
 
 - [Contributing Guide](../contributing.md)
 - [Performance Benchmarks](../contributing/performance-impact.md)
-- [CI/CD Pipeline](../../CI_CD_PIPELINE.md)
+- [CI/CD Pipeline](https://github.com/Soroban-Cookbook/Soroban_Cookbook_online/blob/main/CI_CD_PIPELINE.md)
 
